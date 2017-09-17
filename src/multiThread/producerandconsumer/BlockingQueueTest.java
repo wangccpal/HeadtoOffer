@@ -17,25 +17,24 @@ public class BlockingQueueTest {
         Consumer consumer2= new Consumer(queue);
         Consumer consumer3= new Consumer(queue);
 
-        // ½èÖúExecutors
+        // ï¿½ï¿½ï¿½ï¿½Executors
         ExecutorService service = Executors.newCachedThreadPool();
-        // Æô¶¯Ïß³Ì
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
         service.execute(producer1);
         service.execute(producer2);
         service.execute(producer3);
         service.execute(consumer1);
         service.execute(consumer2);
         service.execute(consumer3);
-        Executor
 
-        // Ö´ÐÐ10s
+        // Ö´ï¿½ï¿½10s
         Thread.sleep(10 * 1000);
         producer1.stop();
         producer2.stop();
         producer3.stop();
  
         Thread.sleep(2000);
-        // ÍË³öExecutor
+        // ï¿½Ë³ï¿½Executor
         service.shutdown();
     }
 

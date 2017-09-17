@@ -80,6 +80,11 @@ public class Poin24 {
     	return num;
     }
     
+    /**
+     * 操作符的全排列
+     * @param input
+     * @param n
+     */
     private static void getOptAllOrder(String input,int n){
     	for (char c : input.toCharArray()) {
 			if(sb.length()==n) {
