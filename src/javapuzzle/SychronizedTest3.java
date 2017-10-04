@@ -5,8 +5,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import org.junit.Test;
-
 /**
  * 测试sychronized标记方法，类，代码块的区别； 类
  * 同步类
