@@ -3,8 +3,8 @@ package Head67;
 import java.util.List;
 
 /**
- * »ñµÃÈÎÒâÁ½µã¼äµÄ¾àÀë Ê×ÏÈÇó³öÁ½µãµÄ×îµÍ¹«¹²×æÏÈlcn£¬dist(n1,n2) = dist(root,n1) + dist(root,n2) -
- * 2*(root,lcn); ¾àÀë=Â·¾¶µÄ³¤¶È=Â·¾¶ÉÏ½Úµã¸öÊı-1
+ * è·å¾—ä»»æ„ä¸¤ç‚¹é—´çš„è·ç¦» é¦–å…ˆæ±‚å‡ºä¸¤ç‚¹çš„æœ€ä½å…¬å…±ç¥–å…ˆlcnï¼Œdist(n1,n2) = dist(root,n1) + dist(root,n2) -
+ * 2*(root,lcn); è·ç¦»=è·¯å¾„çš„é•¿åº¦=è·¯å¾„ä¸ŠèŠ‚ç‚¹ä¸ªæ•°-1
  * 
  * @author CC
  *
@@ -15,7 +15,7 @@ public class DistanceBetween2TreeNode {
 		return dist(head,n1) + dist(head,n2) - 2*dist(head,lcn);
 	}
 
-	public static int dist(TreeNode head, TreeNode n1) {// ¸ù½Úµãµ½ÈÎÒâ½ÚµãµÄÂ·¾¶³¤¶È
+	public static int dist(TreeNode head, TreeNode n1) {// æ ¹èŠ‚ç‚¹åˆ°ä»»æ„èŠ‚ç‚¹çš„è·¯å¾„é•¿åº¦
 		return TreeLowestComonNode.getPath(head, n1) == null ? 0 : TreeLowestComonNode.getPath(head, n1).size() - 1;
 	}
 
