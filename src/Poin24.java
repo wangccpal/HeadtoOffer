@@ -9,10 +9,10 @@ public class Poin24 {
 	static List<String> opt = new ArrayList<String>();
 	static StringBuffer sb = new StringBuffer();
 
-/*ÇëÍê³ÉÏÂÃæÕâ¸öº¯Êı£¬ÊµÏÖÌâÄ¿ÒªÇóµÄ¹¦ÄÜ
-µ±È»£¬ÄãÒ²¿ÉÒÔ²»°´ÕÕÏÂÃæÕâ¸öÄ£°åÀ´×÷´ğ£¬ÍêÈ«°´ÕÕ×Ô¼ºµÄÏë·¨À´ ^-^ 
-******************************¿ªÊ¼Ğ´´úÂë******************************/
-    static String[] Check24(double[][] data, int n) {//n±íÊ¾ÓĞ¼¸ÕÅÅÆ
+/*è¯·å®Œæˆä¸‹é¢è¿™ä¸ªå‡½æ•°ï¼Œå®ç°é¢˜ç›®è¦æ±‚çš„åŠŸèƒ½
+å½“ç„¶ï¼Œä½ ä¹Ÿå¯ä»¥ä¸æŒ‰ç…§ä¸‹é¢è¿™ä¸ªæ¨¡æ¿æ¥ä½œç­”ï¼Œå®Œå…¨æŒ‰ç…§è‡ªå·±çš„æƒ³æ³•æ¥ ^-^ 
+******************************å¼€å§‹å†™ä»£ç ******************************/
+    static String[] Check24(double[][] data, int n) {//nè¡¨ç¤ºæœ‰å‡ å¼ ç‰Œ
 		String [] rst = new String[data.length];
 		if(opt.isEmpty()) getOptAllOrder("+-*/", n-1);
 		int i = 0;
@@ -60,9 +60,9 @@ public class Poin24 {
 	}
 
     /**
-     * ¼ÆËãÊäÈëÊı×ÖµÄÈ«ÅÅÁĞ
-     * @param input ÊäÈëÊı×Ö
-     * @param n ÊäÈë0¿ªÊ¼¼ÆËã
+     * è®¡ç®—è¾“å…¥æ•°å­—çš„å…¨æ’åˆ—
+     * @param input è¾“å…¥æ•°å­—
+     * @param n è¾“å…¥0å¼€å§‹è®¡ç®—
      * @return
      */
     private static List<double[]> getNumAllOrder(double[] input,int n){
@@ -81,7 +81,7 @@ public class Poin24 {
     }
     
     /**
-     * ²Ù×÷·ûµÄÈ«ÅÅÁĞ
+     * æ“ä½œç¬¦çš„å…¨æ’åˆ—
      * @param input
      * @param n
      */
@@ -105,7 +105,7 @@ private static void swap(double[] input, int i, int j) {
 		input[i] = input[j];
 		input[j] = temp;
 	}
-/******************************½áÊøĞ´´úÂë******************************/
+/******************************ç»“æŸå†™ä»£ç ******************************/
 
 
     public static void main(String[] args){

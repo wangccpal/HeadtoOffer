@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Ofo33 {
-	static int[] arr; // ´æ·Å4¸öÊı
-	static int[] tag; // ±ê¼Ç¼ÆËã ÓÅÏÈ¼¶¡£+-ÓÃ1±íÊ¾¡ª*/ÓÃ2±íÊ¾
+	static int[] arr; // å­˜æ”¾4ä¸ªæ•°
+	static int[] tag; // æ ‡è®°è®¡ç®— ä¼˜å…ˆçº§ã€‚+-ç”¨1è¡¨ç¤ºâ€”*/ç”¨2è¡¨ç¤º
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class Ofo33 {
 	}
 
 	/**
-	 * µÃµ½ËùÓĞÊıµÄÅÅÁĞ×éºÏ
+	 * å¾—åˆ°æ‰€æœ‰æ•°çš„æ’åˆ—ç»„åˆ
 	 * 
 	 * @param t
 	 */
@@ -33,7 +33,7 @@ public class Ofo33 {
 	}
 
 	/**
-	 * µÚi¸öÊıÓëµÚj¸öÊı½»»»
+	 * ç¬¬iä¸ªæ•°ä¸ç¬¬jä¸ªæ•°äº¤æ¢
 	 * 
 	 * @param i
 	 * @param j
@@ -47,9 +47,9 @@ public class Ofo33 {
 
 	/**
 	 * 
-	 * @param t   ±íÊ¾µÚt¸öÊı
-	 * @param num ¼ÆËãµÄµ±Ç°Öµ
-	 * @param s   µ±Ç°µÄ±í´ïÊ½
+	 * @param t   è¡¨ç¤ºç¬¬tä¸ªæ•°
+	 * @param num è®¡ç®—çš„å½“å‰å€¼
+	 * @param s   å½“å‰çš„è¡¨è¾¾å¼
 	 */
 	public static void computer(int t, int num, String s) {
 		if (t == 4) {
@@ -93,10 +93,10 @@ public class Ofo33 {
 	}
 
 	/**
-	 * ¸ù¾İtag±ê¼ÇµÄÓÅÏÈ¼¶ÅĞ¶ÏÊÇ·ñ¼ÓÀ¨ºÅ
+	 * æ ¹æ®tagæ ‡è®°çš„ä¼˜å…ˆçº§åˆ¤æ–­æ˜¯å¦åŠ æ‹¬å·
 	 * 
 	 * @param s
-	 * @return ¼ÓÊä³ö¼ÓÀ¨ºÅµÄ±í´ïÊ½·µ»Øfalse£¬²»¼Ó·µ»Øtrue
+	 * @return åŠ è¾“å‡ºåŠ æ‹¬å·çš„è¡¨è¾¾å¼è¿”å›falseï¼Œä¸åŠ è¿”å›true
 	 */
 	public static boolean isOk(String s) {
 		int t = 0;

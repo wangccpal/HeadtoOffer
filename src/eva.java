@@ -11,7 +11,7 @@ public class eva {
 		a.add("1");
 		a.add("2");
 		for (String temp : a) {
-			if ("1".equals(temp)) {//ÎªÊ²Ã´1¡¢2½á¹û²»Ò»Ñù£¿
+			if ("1".equals(temp)) {//ä¸ºä»€ä¹ˆ1ã€2ç»“æœä¸ä¸€æ ·ï¼Ÿ
 				
 				a.remove(temp);
 			}

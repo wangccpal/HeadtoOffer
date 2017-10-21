@@ -1,4 +1,4 @@
-//最长公共子序列
+//鏈�闀垮叕鍏卞瓙搴忓垪
 public class LCS {
 
 	int[][] lcsLength(char[] x, char[] y) {
@@ -49,5 +49,5 @@ public class LCS {
 		System.out.println(lcs.printLCS(lcs.lcsLength(x, y), x, x.length - 1, y.length - 1));
 	}
 
-  
+
 }
