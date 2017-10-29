@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 /**
- * Çó¶ş²æÊ÷Á½µãµÄ×îµÍ¹«¹²×æÏÈ£¬¿ÉÒÔÓÃ»ØËİÇó³ö¸ù½Úµãµ½½ÚµãµÄÂ·¾¶£¬È»ºó´ÓÍ·±È½ÏÁ½¸öÂ·¾¶£¬×îºóÒ»¸öÏàµÈµÄ½Úµã¼´ÎªËùÇó
+ * æ±‚äºŒå‰æ ‘ä¸¤ç‚¹çš„æœ€ä½å…¬å…±ç¥–å…ˆï¼Œå¯ä»¥ç”¨å›æº¯æ±‚å‡ºæ ¹èŠ‚ç‚¹åˆ°èŠ‚ç‚¹çš„è·¯å¾„ï¼Œç„¶åä»å¤´æ¯”è¾ƒä¸¤ä¸ªè·¯å¾„ï¼Œæœ€åä¸€ä¸ªç›¸ç­‰çš„èŠ‚ç‚¹å³ä¸ºæ‰€æ±‚
  * @author CC
  *
  */
@@ -21,12 +21,12 @@ public class TreeLowestComonNode {
 			TreeNode node1 =it1.next() ;
 			TreeNode node2 = it2.next();
 			if(node1.val==node2.val)   res = node1;
-			else break;//Óöµ½²»ÏëµÈÖ±½ÓbreakµÃµ½½á¹û
+			else break;//é‡åˆ°ä¸æƒ³ç­‰ç›´æ¥breakå¾—åˆ°ç»“æœ
 		}
 		return res;
 	}
 	
-	public static List<TreeNode> getPath(TreeNode head, TreeNode node){//»ñµÃrootµ½ÈÎÒâ½ÚµãµÄÂ·¾¶
+	public static List<TreeNode> getPath(TreeNode head, TreeNode node){//è·å¾—rootåˆ°ä»»æ„èŠ‚ç‚¹çš„è·¯å¾„
 		List<TreeNode> list = new LinkedList<TreeNode>();
 		List<TreeNode> res = new LinkedList<TreeNode>();
 		back(head,node,list,res);
