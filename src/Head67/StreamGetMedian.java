@@ -3,7 +3,7 @@ package Head67;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 /**
- * 得到输入流里的中位数
+ * 寰楀埌杈撳叆娴侀噷鐨勪腑浣嶆暟
  * @author CC
  *
  */
@@ -15,6 +15,12 @@ public class StreamGetMedian {
 				@Override
 				public int compare(Integer o1, Integer o2) {
 					return o2-o1;
+				}
+
+				@Override
+				public boolean equals(Object obj) {
+					// TODO Auto-generated method stub
+					return false;
 				}
 			});
 	

@@ -18,9 +18,7 @@ public class BlockAndStaticBlock {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		new BlockAndStaticBlock();
-//		new BlockAndStaticBlock();
-		
+		new BlockAndStaticBlock();
 	}
 
 }

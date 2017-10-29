@@ -19,6 +19,12 @@ public class PrintMinNumber {
 				
 				return (o1+o2).hashCode()-(o2+o1).hashCode();
 			}
+
+			@Override
+			public boolean equals(Object obj) {
+				// TODO Auto-generated method stub
+				return false;
+			}
 		}));
 
 		StringBuilder sb = new StringBuilder();
