@@ -2,7 +2,7 @@ package sort;
 
 import java.util.Arrays;
 
-import tools.Swap;;
+import util.Swap;;
 public class QuickSort {
 	static void quickSort(int[] nums){
 		sort(nums,0,nums.length-1);
