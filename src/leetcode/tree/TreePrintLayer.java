@@ -1,5 +1,7 @@
 package leetcode.tree;
 
+import leetcode.data.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -33,14 +35,4 @@ public class TreePrintLayer {
 
     }
 
-}
-class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    public TreeNode(int val) {
-        this.val = val;
-
-    }
 }

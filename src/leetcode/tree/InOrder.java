@@ -2,13 +2,13 @@ package leetcode.tree;
 
 import java.util.Stack;
 
-public class MidOrder {
+public class InOrder {
 
 	public static void main(String[] args) {
 		Node tree = Node.test1();
 		midOrder(tree);
 		System.out.println();
-		midOrderLoop(tree);
+		inOrderLoop(tree);
 		System.out.println();
 	}
 
@@ -16,7 +16,7 @@ public class MidOrder {
 	 * 非递归中序遍历
 	 * @param tree
 	 */
-	private static void midOrderLoop(Node root) {
+	private static void inOrderLoop(Node root) {
 		if(root == null) return;
 		Stack<Node> s= new Stack<>();
 		while(!s.isEmpty() || root != null) {
