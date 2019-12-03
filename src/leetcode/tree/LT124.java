@@ -11,33 +11,30 @@ import java.util.List;
  * @date 2019-12-02
  **/
 public class LT124 {
-    List<Integer> nodes = new LinkedList<>();
+    int max = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
-        midRetrieve(root);
-        int max = Integer.MIN_VALUE;
-        boolean cons = false;
-        for (int i : nodes) {
-            if (cons) {
-                if (i > 0 && max > 0) {
-                    max += i;
-                } else if (i > 0 && max <= 0){
-                    max = i;
-                } else {
-                    cons = false;
-                }
-            } else {
-                if (i > max) max = i;
-                cons = true;
-            }
-        }
+        maxPath(root);
         return max;
     }
 
-    private void midRetrieve(TreeNode root) {
-        if (root != null) {
-            midRetrieve(root.left);
-            nodes.add(root.val);
-            midRetrieve(root.right);
+    private int maxPath(TreeNode root) {
+        if (root == null) {
+            return 0;
         }
+        //如果是负的可以让left直接为0
+        int left = maxPath(root.left);
+        int right = maxPath(root.right);
+        if (left > max) max = left;
+        if (right > max) max = right;
+        int sum = left + root.val + right;
+        if (sum > max) max = sum;
+        return Math.max(left, right) + root.val;
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        System.out.println(new LT124().maxPathSum(root));
     }
 }
