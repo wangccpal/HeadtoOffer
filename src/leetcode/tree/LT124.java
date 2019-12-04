@@ -22,19 +22,16 @@ public class LT124 {
             return 0;
         }
         //如果是负的可以让left直接为0
-        int left = maxPath(root.left);
-        int right = maxPath(root.right);
-        if (left > max) max = left;
-        if (right > max) max = right;
+        int left = Math.max(maxPath(root.left),0);
+        int right = Math.max(maxPath(root.right),0);
         int sum = left + root.val + right;
         if (sum > max) max = sum;
         return Math.max(left, right) + root.val;
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
+        TreeNode root = new TreeNode(-3);
+
         System.out.println(new LT124().maxPathSum(root));
     }
 }
