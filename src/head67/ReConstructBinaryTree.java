@@ -35,10 +35,41 @@ public class ReConstructBinaryTree {
 		preOrder(root.right);
 	}
 	public static void main(String[] args) {
-		int [] pre = {1,2,4,7,3,5,6,8};
-		int [] in = {4,7,2,1,5,3,8,6};
-		TreeNode root = reConstructBinaryTree(pre,in);
+//		int [] pre = {1,2,4,7,3,5,6,8};
+//		int [] in = {4,7,2,1,5,3,8,6};
+//		TreeNode root = reConstructBinaryTree(pre,in);
+
+		int [] pre = {3,9,20,15,17};
+		int [] in = {9,3,15,20,17};
+		TreeNode root = buildTree(in,pre);
 		preOrder(root);
+	}
+
+	public static TreeNode buildTree(int[] preorder, int[] inorder) {
+		return bt(preorder, 0, preorder.length, inorder, 0, inorder.length);
+	}
+
+	/**
+	 * 这里写反了。。所以调用的时候反过来；有坑的地方是pos是数组重的位置还是相对起点的偏移量。
+	 * @param pre
+	 * @param pl
+	 * @param pr
+	 * @param in
+	 * @param il
+	 * @param ir
+	 * @return
+	 */
+	static TreeNode bt(int[] pre, int pl, int pr, int[] in, int il, int ir) {
+		if(pr <= pl) return null;
+		int mid = in[il];
+		int pos = 0;
+		for(int i = pl; i < pr; i++) {
+			if(pre[i] == mid) pos = i;
+		}
+		TreeNode root = new TreeNode(mid);
+		root.left = bt(pre, pl, pos, in , il + 1, il + 1 + pos - pl);
+		root.right = bt(pre, pos + 1, pr, in , pos + 1 + il - pl, ir);
+		return root;
 	}
 
 }
