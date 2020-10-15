@@ -27,7 +27,9 @@ public class HeapSort {
         }
     }
     public static void main(String[] args) {
+
         int[] nums = {3,4,5};
+        int [] c = Arrays.copyOf(nums, nums.length);
 //        int[] nums = {3,4};
         sort(nums);
         System.out.println(Arrays.toString(nums));

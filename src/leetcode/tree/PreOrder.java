@@ -1,5 +1,8 @@
 package leetcode.tree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -61,5 +64,46 @@ public class PreOrder {
 			}
 			root = s.pop().right; //这里跳过了根节点所以不会二次遍历
 		}
+	}
+
+	/**
+	 * 模版方法
+	 * @param root
+	 * @return
+	 */
+	public List<Integer> preorderTraversal(Node root) {
+		List<Integer> res = new ArrayList<>();
+		LinkedList<Node> list = new LinkedList<>();
+		while(root != null || !list.isEmpty()) {
+			if(!list.isEmpty()) root = list.removeLast();
+			if(root == null) {
+				res.add(list.removeLast().val);
+			} else {
+				if(root.right != null) list.add(root.right);
+				if(root.left != null) list.add(root.left);
+				list.addLast(root);
+				list.add(null);
+			}
+		}
+		return res;
+	}
+
+	/**
+	 * 模版方法 特化
+	 * @param root
+	 * @return
+	 */
+	public List<Integer> preorderTraversal2(Node root) {
+		List<Integer> res = new ArrayList<>();
+		LinkedList<Node> list = new LinkedList<>();
+		if (root != null) list.addLast(root);
+		while(!list.isEmpty()) {
+			root = list.removeLast();
+			res.add(root.val);
+			if(root.right != null) list.add(root.right);
+			if(root.left != null) list.add(root.left);
+
+		}
+		return res;
 	}
 }

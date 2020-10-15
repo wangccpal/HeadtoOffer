@@ -1,5 +1,8 @@
 package leetcode.tree;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -19,7 +22,6 @@ public class PostOrder {
 
 	/**
 	 * 双栈法后序遍历一个二叉树
-	 * @param tree
 	 */
 	private static void postOrderLoopDoubleStack(Node root) {
 		if(root == null) return;
@@ -63,7 +65,25 @@ public class PostOrder {
                 }    
             }    
     
-        }  
+        }
+	}
+
+	/**
+	 * 模版方法， 特化一下，前序换个输出顺序
+	 * @param root
+	 * @return
+	 */
+	public List<Integer> postorderTraversal(Node root) {
+		LinkedList<Integer> res = new LinkedList<>();
+		LinkedList<Node> list = new LinkedList<>();
+		if(root != null) list.add(root);
+		while(!list.isEmpty()) {
+			root = list.removeLast();
+			res.addFirst(root.val);
+			if(root.left != null) list.add(root.left);
+			if(root.right != null) list.add(root.right);
+		}
+		return res;
 	}
 	
 

@@ -33,9 +33,27 @@ public class QuickSelect {
         nums[i] = nums[j];
         nums[j] = temp;
     }
+    public int findKthLargest(int[] nums, int k) {
+        return find(nums, k, 0, nums.length-1);
+    }
+
+    int find(int[] nums, int k, int l, int r) {
+        int lo = l, hi = r+1, p = nums[l];
+        while(true) {
+            while(++lo < r && nums[lo] < p);
+            while(nums[--hi] > p);
+            if(lo >= hi) break;
+            swap(nums, lo, hi);
+        }
+        int larger = r-hi;
+        if(larger == k-1) return p;
+        else if(larger > k-1) return find(nums, k, hi+1, r);
+        else return find(nums, k-larger-1, l+1, hi);
+    }
 
     public static void main(String[] args) {
         int[] nums = {1,2,4,3,6,5};
         System.out.println(new QuickSelect().quickSelect(nums,0, nums.length-1,1));
+        System.out.println(new QuickSelect().find(nums,1, 0,nums.length-1));
     }
 }
